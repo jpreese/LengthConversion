@@ -1,17 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LengthConversion.Models
+﻿namespace LengthConversion.Models
 {
     public enum Unit
     {
-        Kilometer,
+        Foot,
         Mile,
-        Inch,
-        Yard,
-        Foot
+        Yard
     }
 }
