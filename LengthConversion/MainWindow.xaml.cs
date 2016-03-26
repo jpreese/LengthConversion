@@ -32,10 +32,6 @@ namespace LengthConversion
             var converter = new KilometerConverter();
             var result = converter.Convert(kilo);
 
-            result = new RoundingDecorator(result);
-            result = new ExponentialDecorator(result);
-            result = new UnitDecorator(result, (Unit)cboUnits.SelectedItem);
-
             txtOutput.Text = result.GetValue();
         }
     }

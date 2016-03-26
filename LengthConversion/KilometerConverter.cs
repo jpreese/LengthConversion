@@ -7,7 +7,10 @@ namespace LengthConversion
     {
         public Result Convert(Kilometer kilometer)
         {
-            return GetChain().Convert(kilometer);
+            var startOfChain = GetChain();
+            var result = startOfChain.Convert(kilometer);
+
+            return new ResultDecorator(result, kilometer.ConvertTo).Decorate();
         }
 
         private ConversionHandler GetChain()
