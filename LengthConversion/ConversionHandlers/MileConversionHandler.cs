@@ -6,9 +6,9 @@ namespace LengthConversion.ConversionHandlers
     {
         private const double KM_IN_MILES = 0.621371;
         
-        public override IResult Convert(Kilometer kilometer)
+        public override Result Convert(Kilometer kilometer)
         {
-            if(kilometer.ConvertTo != Unit.Mile)
+            if(kilometer.ConvertTo != Unit.Miles)
             {
                 return _next.Convert(kilometer);
             }

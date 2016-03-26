@@ -6,9 +6,9 @@ namespace LengthConversion.ConversionHandlers
     {
         private const double KM_IN_YARDS = 1093.61;
 
-        public override IResult Convert(Kilometer kilometer)
+        public override Result Convert(Kilometer kilometer)
         {
-            if (kilometer.ConvertTo != Unit.Yard)
+            if (kilometer.ConvertTo != Unit.Yards)
             {
                 return _next.Convert(kilometer);
             }
