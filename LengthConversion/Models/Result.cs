@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LengthConversion.Models
+﻿namespace LengthConversion.Models
 {
-    public class Result : IResult
+    public class Result
     {
         public double Value { get; set; }
+
+        public virtual string GetValue()
+        {
+            return Value.ToString();
+        }
     }
 }
