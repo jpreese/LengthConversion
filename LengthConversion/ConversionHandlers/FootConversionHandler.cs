@@ -6,7 +6,7 @@ namespace LengthConversion.ConversionHandlers
     {
         private const double KM_IN_FEET = 3280.84;
 
-        public override IResult Convert(Kilometer kilometer)
+        public override Result Convert(Kilometer kilometer)
         {
             return new Result
             {

@@ -6,7 +6,7 @@ namespace LengthConversion.ConversionHandlers
     {
         protected ConversionHandler _next;
 
-        public abstract IResult Convert(Kilometer kilometer);
+        public abstract Result Convert(Kilometer kilometer);
 
         public void SetNext(ConversionHandler next)
         {
