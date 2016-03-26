@@ -1,14 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using LengthConversion.Models;
+﻿using LengthConversion.Models;
 
 namespace LengthConversion.Decorations
 {
     class ExponentialDecorator : Decorator
     {
-        public ExponentialDecorator(IResult result) : base(result) { }
+        public ExponentialDecorator(Result result) : base(result)
+        {
+            Value = result.Value;
+        }
+
+        public override string GetValue()
+        {
+            return Value.ToString("0.0000e0");
+        }
     }
 }
