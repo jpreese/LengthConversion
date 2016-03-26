@@ -2,8 +2,8 @@
 {
     public enum Unit
     {
-        Foot,
-        Mile,
-        Yard
+        Feet,
+        Miles,
+        Yards
     }
 }
