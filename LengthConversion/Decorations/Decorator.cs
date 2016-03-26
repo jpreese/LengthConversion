@@ -1,31 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using LengthConversion.Models;
+﻿using LengthConversion.Models;
 
 namespace LengthConversion.Decorations
 {
-    public class Decorator : IResult
+    public class Decorator : Result
     {
-        protected IResult _result;
+        protected Result _result;
 
-        public Decorator(IResult result)
+        public Decorator(Result result)
         {
             _result = result;
         }
-        public double Value
-        {
-            get
-            {
-                return _result.Value;
-            }
 
-            set
-            {
-                _result.Value = value;
-            }
+        public override string GetValue()
+        {
+            return _result.GetValue();
         }
     }
 }
