@@ -5,7 +5,7 @@ namespace LengthConversion
 {
     public class KilometerConverter
     {
-        public IResult Convert(Kilometer kilometer)
+        public Result Convert(Kilometer kilometer)
         {
             return GetChain().Convert(kilometer);
         }
