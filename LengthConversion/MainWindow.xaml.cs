@@ -28,19 +28,15 @@ namespace LengthConversion
                 Value = double.Parse(txtInput.Text),
                 ConvertTo = (Unit)cboUnits.SelectedItem
             };
-
+            
             var converter = new KilometerConverter();
             var result = converter.Convert(kilo);
 
             result = new RoundingDecorator(result);
             result = new ExponentialDecorator(result);
+            result = new UnitDecorator(result, (Unit)cboUnits.SelectedItem);
 
-            txtOutput.Text = result.Value.ToString();
-
-            // round decorator
-            // e notation decorator
-            // unit name decorator
-            // print result
+            txtOutput.Text = result.GetValue();
         }
     }
 }
