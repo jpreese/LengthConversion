@@ -58,6 +58,11 @@
     <Compile Include="ConversionHandlers\FootConversionHandler.cs" />
     <Compile Include="ConversionHandlers\MileConversionHandler.cs" />
     <Compile Include="ConversionHandlers\YardConversionHandler.cs" />
+    <Compile Include="Decorations\Decorator.cs" />
+    <Compile Include="Decorations\ExponentialDecorator.cs" />
+    <Compile Include="Decorations\RoundingDecorator.cs" />
+    <Compile Include="Models\IResult.cs" />
+    <Compile Include="Models\Result.cs" />
     <Compile Include="Models\Kilometer.cs" />
     <Compile Include="Models\Units.cs" />
     <Compile Include="KilometerConverter.cs" />

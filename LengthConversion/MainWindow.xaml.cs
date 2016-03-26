@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Windows;
 using LengthConversion.Models;
+using LengthConversion.Decorations;
 
 namespace LengthConversion
 {
@@ -29,7 +30,17 @@ namespace LengthConversion
             };
 
             var converter = new KilometerConverter();
-            txtOutput.Text = converter.Convert(kilo).ToString();
+            var result = converter.Convert(kilo);
+
+            result = new RoundingDecorator(result);
+            result = new ExponentialDecorator(result);
+
+            txtOutput.Text = result.Value.ToString();
+
+            // round decorator
+            // e notation decorator
+            // unit name decorator
+            // print result
         }
     }
 }
